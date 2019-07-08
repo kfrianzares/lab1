@@ -34,10 +34,28 @@
 </head>
 
 <body style="background-color: white; font-family: sans-serif" text="black" >
-<audio controls autoplay>
-  <source src="https://s3.amazonaws.com/Syntaxxx/bigger-picture.mp3" type="audio/mpeg">
-  <p>If you can read this, your browser does not support the audio element.</p>
-</audio>
+	.header {
+  padding: 10px 16px;
+  background: #555;
+  color: #f1f1f1;
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 102px;
+}
 	body {
 	  margin-right: 30px;
 	}
@@ -99,7 +117,10 @@
 		<div id="project6">
 			<a href="project.html">
 				<img src="https://assets.rappler.com/612F469A6EA84F6BAE882D2B94A4B421/img/860481C26CAC44478C903AF0A3860D43/unique-salonga-grandma-ocrecords-2.jpg">
-				
+		<audio controls autoplay>
+  			<source src="https://s3.amazonaws.com/Syntaxxx/bigger-picture.mp3" type="audio/mpeg">
+  			<p>If you can read this, your browser does not support the audio element.</p>
+		</audio>		
 				
 			</a>
 		</div>
