@@ -2,38 +2,106 @@
 
 <html>
 <head>
+	*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+img{
+  max-width:100%;
+}
+h2{
+  font-size:2.5em;
+}
+.container{
+  width:90%;
+  margin:auto;
+}
+header{
+  color:#fff;
+  position:absolute;
+  display:flex;
+  flex-flow: row wrap;
+  width:100%;
+  top:0;
+  left:0;
+  z-index:9;
+}
+header .container{
+  display:flex;
+  flex-flow: row wrap;
+  align-items:center;
+  padding:15px 0;
+}
+.logo{
+  font-size:20px;
+  text-transform:uppercase;
+  font-weight:bold;
+}
+.logo a{
+  color:#fff;
+  text-decoration:none;
+}
+nav {
+    justify-content: flex-end;
+    display: flex;
+    flex: 2 auto;
+}
+nav ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:flex;
+  flex-direction: row;
+}
+nav ul li{
+  padding:0.5em;
+}
+nav ul li a{
+  color:#fff;
+  text-decoration:none;
+  display:inline-block;
+}
+section{
+  padding:150px 0;
+}
+.hero-banner{
+background:url(https://images.unsplash.com/photo-1517946264308-1a7ea8abb6e0?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=add9d7ca772d122fb699bb1790d89a93) no-repeat center center;
+  background-size: cover;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  text-align:center;
+  position:relative;
+  z-index:0;
+}
+.hero-banner:after{
+  content:"";
+  display:block;
+  background:rgba(0,0,0,0.5);
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+}
+.hero-banner h2{
+  color:#fff;
+  position:relative;
+  z-index:1;
+}
+.about{
+  text-align:center;
+  line-height:2;
+}
+.portfolio{
+  text-align:center;
+  line-height:2;
+  background:#f1f1f1;
+}
 	<title>Rianzares</title>
 	<style type = "text/css">
-		body{        
-        padding-top: 60px;
-        padding-bottom: 40px;
-    }
-    .fixed-header, .fixed-footer{
-        width: 100%;
-        position: fixed;        
-        background: #333;
-        padding: 10px 0;
-        color: #fff;
-    }
-    .fixed-header{
-        top: 0;
-    }
-    .fixed-footer{
-        bottom: 0;
-    }
-    .container{
-        width: 80%;
-        margin: 0 auto; /* Center the DIV horizontally */
-    }
-    nav a{
-        color: #fff;
-        text-decoration: none;
-        padding: 7px 25px;
-        display: inline-block;
-    }
-
-		
-		div
+  		div
 		{
 			margin-left: 0px;
 		}
@@ -44,6 +112,8 @@
 </style>
 </head>
 	<body style="background-color: #d6b760; font-family: sans-serif" text= maroon; >
+	<img class="logo" src="logo-codeco.png" width="40" height="40" />
+
 
 </div>
 	
@@ -63,8 +133,7 @@
 		<!-- divs are invisible structuring elements that stack vertically by default. Use them to organize your code -->
 		<!-- img tags are images. Lorem Pixel will deliver random images; handy! -->
 		<!-- a are anchors, also known as hyperlinks. Use the href attribute to tell the browser where to go when the user clicks -->
-		<div id="project1">
-				<h4> Kervin Rianzares <h4>				
+		<div id="project1">				
 				
 			</a>
 		</div>
