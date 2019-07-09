@@ -2,103 +2,66 @@
 
 <html>
 <head>
-	*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
-img{
-  max-width:100%;
+
+.top-container {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
 }
-h2{
-  font-size:2.5em;
+
+.header {
+  padding: 10px 16px;
+  background: #555;
+  color: #f1f1f1;
 }
-.container{
-  width:90%;
-  margin:auto;
+
+.content {
+  padding: 16px;
 }
-header{
-  color:#fff;
-  position:absolute;
-  display:flex;
-  flex-flow: row wrap;
-  width:100%;
-  top:0;
-  left:0;
-  z-index:9;
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
-header .container{
-  display:flex;
-  flex-flow: row wrap;
-  align-items:center;
-  padding:15px 0;
+
+.sticky + .content {
+  padding-top: 102px;
 }
-.logo{
-  font-size:20px;
-  text-transform:uppercase;
-  font-weight:bold;
+</style>
+</head>
+<body>
+
+<div class="top-container">
+  <h1>Scroll Down</h1>
+  <p>Scroll down to see the sticky effect.</p>
+</div>
+
+<div class="header" id="myHeader">
+  <h2>My Header</h2>
+</div>
+	<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
 }
-.logo a{
-  color:#fff;
-  text-decoration:none;
-}
-nav {
-    justify-content: flex-end;
-    display: flex;
-    flex: 2 auto;
-}
-nav ul{
-  list-style:none;
-  padding:0;
-  margin:0;
-  display:flex;
-  flex-direction: row;
-}
-nav ul li{
-  padding:0.5em;
-}
-nav ul li a{
-  color:#fff;
-  text-decoration:none;
-  display:inline-block;
-}
-section{
-  padding:150px 0;
-}
-.hero-banner{
-background:url(https://images.unsplash.com/photo-1517946264308-1a7ea8abb6e0?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=add9d7ca772d122fb699bb1790d89a93) no-repeat center center;
-  background-size: cover;
-  height:100vh;
-  display:flex;
-  align-items:center;
-  text-align:center;
-  position:relative;
-  z-index:0;
-}
-.hero-banner:after{
-  content:"";
-  display:block;
-  background:rgba(0,0,0,0.5);
-  left:0;
-  top:0;
-  height:100%;
-  width:100%;
-  position:absolute;
-}
-.hero-banner h2{
-  color:#fff;
-  position:relative;
-  z-index:1;
-}
-.about{
-  text-align:center;
-  line-height:2;
-}
-.portfolio{
-  text-align:center;
-  line-height:2;
-  background:#f1f1f1;
-}
+</script>
+
+
 	<title>Rianzares</title>
 	<style type = "text/css">
   		div
@@ -112,12 +75,7 @@ background:url(https://images.unsplash.com/photo-1517946264308-1a7ea8abb6e0?ixli
 </style>
 </head>
 	<body style="background-color: #d6b760; font-family: sans-serif" text= maroon; >
-	<img class="logo" src="logo-codeco.png" width="40" height="40" />
-
-
 </div>
-	
-	
 	<div>
 		<!-- h1 through h6 are headers. The higher the number, the smaller the header -->
 		<!-- p means paragraph -->
